@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Update Patient</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+}
+
+form{
+width:400px;
+padding:20px;
+border:1px solid gray;
+}
+
+input,select{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:15px;
+}
+
+button{
+padding:10px;
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Update Patient</h2>
+
+<form method="POST">
+
+Name
+
+<input
+type="text"
+name="name"
+value="{{ patient[1] }}"
+>
+
+Age
+
+<input
+type="number"
+name="age"
+value="{{ patient[2] }}"
+>
+
+Gender
+
+<select name="gender">
+
+<option>{{ patient[3] }}</option>
+
+<option>Male</option>
+
+<option>Female</option>
+
+</select>
+
+Phone
+
+<input
+type="text"
+name="phone"
+value="{{ patient[4] }}"
+>
+
+<button>
+Update
+</button>
+
+</form>
+
+</body>
+</html>
